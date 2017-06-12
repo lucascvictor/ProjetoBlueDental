@@ -2,11 +2,6 @@
 
 @section('titulo', 'Cadastro de clinicas')
 
-@section('extrastyle')
-
-
-
-@endsection
 
 
 @section('conteudo')
@@ -18,12 +13,13 @@
         {!! Form::open(array('route' => 'clinic.store')) !!}
           <!-- Nome do dentista  -->
    			{{ Form::label('nome', 'Nome:') }}
-            {{ Form::text('nome', null, array('class' => 'form-control')) }}
+            {{ Form::text('name', null, array('class' => 'form-control')) }}
 
           <!-- CROSP -->
           	{{ Form::label('endereco', 'Endereço:') }}
-    		{{ Form::text('endereco', null, array('class' => 'form-control')) }}
+    		{{ Form::text('adress', null, array('class' => 'form-control')) }}
 
+    		<br />
     		{{ Form::submit('Salvar', array('class' => 'btn btn-success btn-lg btn-block')) }}
 
 			   

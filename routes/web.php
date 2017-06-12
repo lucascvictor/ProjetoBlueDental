@@ -11,7 +11,7 @@
 
 		Route::get ('{id}', ['uses' =>'NotebookController@show']);
 
-		Route::post ('', ['uses' => 'NotebookController@store']);
+		Route::post ('', ['uses' => 'NotebookController@store'])->name('notebook.store');
 
 		Route::put ('{id}', ['uses' => 'NotebookController@update']);
 

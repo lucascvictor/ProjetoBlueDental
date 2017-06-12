@@ -16,4 +16,11 @@ class RotationRepository
 		return Rotation::all();
 	}
 
+	public function store($request)
+	{
+		$escala = $request->seg . " " . $request->ter . " " . $request->qua . " " . $request->qui . " " . $request->sex . " " . $request->sab . " " . $request->dom;
+		$rotation = new Rotation;
+        $rotation->rotation = $escala;
+        $rotation->save();
+	}
 }

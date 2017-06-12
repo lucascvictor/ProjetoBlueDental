@@ -5,10 +5,10 @@
 
 
 @section('conteudo')
-
-<div class="row">
  <h2> Adicionar horário </h2>
-  <div class="col-md-2"> 
+<div class="row">
+
+  <div class="col-md-4"> 
 
        
         {!! Form::open(array('route' => 'schedule.store')) !!}
@@ -38,7 +38,7 @@
       <div class="col-md-4">
 
 
-            <h2> Horários cadastrados </h2>
+            <h3> Horários cadastrados </h3>
 
             <div class="table-responsive">
                 <table class="table table-hover table-striped">

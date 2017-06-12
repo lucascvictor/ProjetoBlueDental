@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\BlueDental\Repositories\NotebookRepository;
+use App\BlueDental\Repositories\DentistRepository;
+use App\BlueDental\Repositories\ClinicRepository;
+use App\BlueDental\Repositories\RotationRepository;
+use App\BlueDental\Repositories\ScheduleRepository;
 
 class NotebookController extends Controller
 {
@@ -16,6 +20,7 @@ class NotebookController extends Controller
     public function index()
     {
         $notebook = new NotebookRepository();
+        
         return view('notebook.index')->with('notebooks', $notebook->getAll());
     }
 
@@ -26,7 +31,12 @@ class NotebookController extends Controller
      */
     public function create()
     {
-        //
+        $notebook = new NotebookRepository();
+        $dentist = new DentistRepository();
+        $clinic = new ClinicRepository();
+        $rotation = new RotationRepository();
+        $schedule = new ScheduleRepository();
+        return view('notebook.create')->with('notebooks', $notebook->getAll())->with('dentists', $dentist->getAll())->with('clinics', $clinic->getAll())->with('rotations', $rotation->getAll())->with('schedules', $schedule->getAll());
     }
 
     /**
@@ -37,7 +47,9 @@ class NotebookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $notebook = new NotebookRepository();
+        $notebook->store($request);
+        return redirect()->back();
     }
 
     /**

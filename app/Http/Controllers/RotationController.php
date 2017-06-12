@@ -37,7 +37,13 @@ class RotationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->seg == null && $request->ter == null && $request->qua == null && $request->qui == null && $request->sex == null && $request->sab == null && $request->dom == null) {
+            return redirect()->back();
+        } else {
+            $rotation = new RotationRepository();
+            $rotation->store($request);
+            return redirect()->back();
+        }
     }
 
     /**

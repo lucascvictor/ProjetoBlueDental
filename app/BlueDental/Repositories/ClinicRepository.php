@@ -16,4 +16,13 @@ class ClinicRepository
 		return Clinic::all();
 	}
 
+	public function store($request)
+	{
+		$clinic = new Clinic;
+        $clinic->name = $request->name;
+        $clinic->adress = $request->adress;
+        $clinic->save();
+
+	}
+
 }

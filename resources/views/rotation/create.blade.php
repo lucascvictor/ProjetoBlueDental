@@ -17,32 +17,31 @@
         <h2> Adicionar escala </h2>
         {!! Form::open(array('route' => 'rotation.store')) !!}
           
-          	{{ Form::checkbox('segunda', '1') }}
-   			{{ Form::label('segunda', 'Segunda-feira:') }}
+          	{{ Form::checkbox('seg', '1') }}
+   			{{ Form::label('seg', 'Segunda-feira:') }}
+            <br />
+            {{ Form::checkbox('ter', '2') }}
+            {{ Form::label('ter', 'Terça-feira:') }}
             
             <br />
-            {{ Form::checkbox('segunda', '2') }}
-            {{ Form::label('segunda', 'Terça-feira:') }}
+            {{ Form::checkbox('qua', '3') }}
+            {{ Form::label('qua', 'Quarta-feira:') }}
             
             <br />
-            {{ Form::checkbox('segunda', '3') }}
-            {{ Form::label('segunda', 'Quarta-feira:') }}
+            {{ Form::checkbox('qui', '4') }}
+            {{ Form::label('qui', 'Quinta-feira:') }}
             
             <br />
-            {{ Form::checkbox('segunda', '4') }}
-            {{ Form::label('segunda', 'Quinta-feira:') }}
+            {{ Form::checkbox('sex', '5') }}
+            {{ Form::label('sex', 'Sexta-feira:') }}
             
             <br />
-            {{ Form::checkbox('segunda', '5') }}
-            {{ Form::label('segunda', 'Sexta-feira:') }}
+            {{ Form::checkbox('sab', '6') }}
+            {{ Form::label('sab', 'Sabado:') }}
             
             <br />
-            {{ Form::checkbox('segunda', '6') }}
-            {{ Form::label('segunda', 'Sabado:') }}
-            
-            <br />
-            {{ Form::checkbox('segunda', '7') }}
-            {{ Form::label('segunda', 'Domingo:') }}
+            {{ Form::checkbox('dom', '7') }}
+            {{ Form::label('dom', 'Domingo:') }}
             
 
 

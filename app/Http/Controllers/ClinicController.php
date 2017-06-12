@@ -37,7 +37,16 @@ class ClinicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->name == null || $request->adress == null) {
+
+            return redirect()->back();
+        }
+
+
+        $clinic = new ClinicRepository();
+        $clinic->store($request);
+
+        return redirect()->back();
     }
 
     /**

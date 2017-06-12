@@ -15,4 +15,15 @@ class ScheduleRepository
 	{
 		return Schedule::all();
 	}
+
+	public function store($request)
+	{
+		$schedule = new Schedule;
+        $schedule->initial = $request->initial;
+        $schedule->initial_lunch = $request->initial_lunch;
+        $schedule->final = $request->final;
+        $schedule->final_lunch = $request->final_lunch;
+        $schedule->save();
+
+	}
 }

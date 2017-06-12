@@ -37,7 +37,16 @@ class DentistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->name == null || $request->crosp == null) {
+
+            return redirect()->back();
+        }
+
+
+        $dentist = new DentistRepository();
+        $dentist->store($request);
+
+        return redirect()->back();
     }
 
     /**

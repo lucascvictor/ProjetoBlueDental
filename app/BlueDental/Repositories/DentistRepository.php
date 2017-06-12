@@ -16,4 +16,13 @@ class DentistRepository
 		return Dentist::all();
 	}
 
+	public function store($request)
+	{
+		$dentist = new Dentist;
+        $dentist->name = $request->name;
+        $dentist->crosp = $request->crosp;
+        $dentist->save();
+
+	}
+
 }

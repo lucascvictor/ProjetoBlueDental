@@ -8,6 +8,8 @@ use App\BlueDental\Models\Notebook;
 
 use DB;
 
+use DateTime;
+
 class NotebookRepository
 {
 
@@ -25,7 +27,7 @@ class NotebookRepository
 
 	public function setData()
 	{
-		$this->data = date("d-m-Y H:i:s");
+		$this->data = new DateTime(date("d-m-Y H:i:s"));
 	}
 
 	public function getAll()
@@ -38,6 +40,30 @@ class NotebookRepository
 		->select('clinics.name as clinic', 'dentists.name as dentist', 'rotations.rotation as rotation', 'schedules.initial as initial', 'schedules.final as final', 'schedules.initial_lunch as initial_l', 'schedules.final_lunch as final_l')
 		->orderBy('dentists.name', 'asc')
 		->paginate(6);
+	}
+
+	public function store($request)
+	{
+		$result = $this->verify($request);
+
+		if ($result == false) {
+			$notebook = new Notebook;
+			$notebook->clinic_id = $request->clinic;
+	        $notebook->dentist_id = $request->dentist;
+	        $notebook->schedule_id = $request->schedule;
+	        $notebook->rotation_id = $request->rotation;
+	        $notebook->created_at = $this->getData();
+	        $notebook->updated_at = $this->getData();
+	        $notebook->save();
+		}
+		
+
+	}
+
+	public function verify($request)
+	{
+		$retorno = DB::table('notebook')->select('*')->where([['clinic_id', '=', $request->clinic],['dentist_id', '=', $request->dentist],['rotation_id', '=', $request->rotation],['schedule_id', '=', $request->schedule]])->get();
+		return isset($retorno[0]->id);
 	}
 
 

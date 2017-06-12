@@ -37,7 +37,13 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->initial == null || $request->initial_lunch == null || $request->final == null || $request->final_lunch == null ) {
+            return redirect()->back();
+        } else {
+             $schedule = new ScheduleRepository();
+             $schedule->store($request);
+             return redirect()->back();
+        }
     }
 
     /**
