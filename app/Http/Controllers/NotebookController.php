@@ -45,7 +45,7 @@ class NotebookController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
