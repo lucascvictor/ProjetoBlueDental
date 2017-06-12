@@ -249,6 +249,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+            1 => __DIR__ . '/../..' . '/app',
         ),
     );
 
@@ -300,11 +301,12 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\CsvImport' => __DIR__ . '/../..' . '/app/BlueDental/Models/CsvImport.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
-        'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
-        'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
-        'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\ClinicController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClinicController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DentistController' => __DIR__ . '/../..' . '/app/Http/Controllers/DentistController.php',
+        'App\\Http\\Controllers\\NotebookController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotebookController.php',
+        'App\\Http\\Controllers\\RotationController' => __DIR__ . '/../..' . '/app/Http/Controllers/RotationController.php',
+        'App\\Http\\Controllers\\ScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ScheduleController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',

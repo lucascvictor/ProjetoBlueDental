@@ -42,5 +42,5 @@ return array(
     'Cron\\' => array($vendorDir . '/mtdowling/cron-expression/src/Cron'),
     'Controllers\\' => array($baseDir . '/app/Http/Controllers'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
-    'App\\' => array($baseDir . '/app'),
+    'App\\' => array($baseDir . '/app', $baseDir . '/app'),
 );
