@@ -13,7 +13,7 @@ class NotebookController extends Controller
      */
     public function index()
     {
-        //
+        return "Index para notebook";
     }
 
     /**
