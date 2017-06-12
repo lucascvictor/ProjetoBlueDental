@@ -11,5 +11,9 @@ use DB;
 class RotationRepository
 {
 
+	public function getAll()
+	{
+		return Rotation::all();
+	}
 
 }

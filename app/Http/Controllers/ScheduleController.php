@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\BlueDental\Repositories\ScheduleRepository;
+
 class ScheduleController extends Controller
 {
     /**
@@ -23,7 +25,8 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('schedule.create');
+        $schedule = new ScheduleRepository();
+        return view('schedule.create')->with('schedules', $schedule->getAll());
     }
 
     /**

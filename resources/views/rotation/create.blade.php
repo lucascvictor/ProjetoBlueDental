@@ -55,7 +55,65 @@
     </div>
     <div class="col-md-4">
 
-    Escalas existentes
+    <div class="row">
+        <div class="col-lg-10">
+            <h2> Excalas existentes </h2>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Escala</th>
+
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($rotations as $rotation)
+					<tr>
+
+                            <td>{{ $rotation->id }}</td>
+               
+                            <td>
+                            	<?php $dias = explode (" ", $rotation->rotation) ?>
+                            	@foreach ($dias as $dia)
+                            		@if ($dia == 1)
+                            			Seg
+                            		@endif
+                            		@if ($dia == 2)
+                            			Ter
+                            		@endif
+                            		@if ($dia == 3)
+                            			Qua
+                            		@endif
+                            		@if ($dia == 4)
+                            			Qui
+                            		@endif
+                            		@if ($dia == 5)
+                            			Sex
+                            		@endif
+                            		@if ($dia == 6)
+                            			Sab
+                            		@endif
+                            		@if ($dia == 7)
+                            			Dom
+                            		@endif
+
+                            	@endforeach 
+                            	
+                            </td>
+                     
+                        </tr>
+
+					@endforeach
+                        
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
     </div>
 </div>
 

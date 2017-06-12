@@ -11,6 +11,9 @@ use DB;
 class ClinicRepository
 {
 
-
+	public function getAll()
+	{
+		return Clinic::all();
+	}
 
 }

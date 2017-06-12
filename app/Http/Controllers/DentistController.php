@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\BlueDental\Repositories\DentistRepository;
+
 class DentistController extends Controller
 {
     /**
@@ -23,7 +25,8 @@ class DentistController extends Controller
      */
     public function create()
     {
-        return view('dentist.create');
+        $dentist = new DentistRepository();
+        return view('dentist.create')->with('dentists', $dentist->getAll());
     }
 
     /**

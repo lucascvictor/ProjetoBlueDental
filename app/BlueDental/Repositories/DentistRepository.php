@@ -11,6 +11,9 @@ use DB;
 class DentistRepository
 {
 
-
+	public function getAll()
+	{
+		return Dentist::all();
+	}
 
 }

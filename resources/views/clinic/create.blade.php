@@ -12,7 +12,7 @@
 @section('conteudo')
 
 <div class="row">
-  <div class="col-md-8"> 
+  <div class="col-md-6"> 
 
         <h2> Adicionar clinica </h2>
         {!! Form::open(array('route' => 'clinic.store')) !!}
@@ -29,10 +29,46 @@
 			   
         {!! Form::close() !!}
     </div>
-    <div>
-    	Clinicas cadastradas
-    </div>
+
+    <div class="col-md-4">
+
+
+            <h2> Clinicas cadastradas </h2>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Endereço</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($clinics as $clinic)
+					<tr>
+
+                            <td>{{ $clinic->id }}</td>    
+                            <td> {{ $clinic->name }}</td>
+                            <td> {{ $clinic->adress }}</td>
+                     
+                        </tr>
+
+					@endforeach
+                        
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+ 
 </div>
+
+
+    
+
+
           
 
 @endsection  

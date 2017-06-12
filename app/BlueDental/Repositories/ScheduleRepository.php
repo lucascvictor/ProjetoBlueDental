@@ -11,5 +11,8 @@ use DB;
 class ScheduleRepository
 {
 
-
+	public function getAll()
+	{
+		return Schedule::all();
+	}
 }

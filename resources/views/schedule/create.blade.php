@@ -35,11 +35,42 @@
         {!! Form::close() !!}
     </div>
 
-     <div class="col-md-4"> 
+      <div class="col-md-4">
 
-     Horarios já cadastrados  
-        
-    </div>
+
+            <h2> Horários cadastrados </h2>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Inicial</th>
+                            <th>Final</th>
+                            <th>Almoço Inicial</th>
+                            <th>Almoço Final</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($schedules as $schedule)
+          				<tr>
+
+                            <td>{{ $schedule->id }}</td>    
+                            <td> {{ $schedule->initial }}</td>
+                            <td> {{ $schedule->final }}</td>
+                            <td> {{ $schedule->initial_lunch }}</td>
+                            <td> {{ $schedule->final_lunch }}</td>
+                     
+                        </tr>
+
+                    @endforeach
+                        
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
 </div>
 
 

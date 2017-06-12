@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\BlueDental\Repositories\RotationRepository;
+
 class RotationController extends Controller
 {
     /**
@@ -23,7 +25,8 @@ class RotationController extends Controller
      */
     public function create()
     {
-        return view('rotation.create');
+        $rotation = new RotationRepository();
+        return view('rotation.create')->with('rotations', $rotation->getAll());
     }
 
     /**

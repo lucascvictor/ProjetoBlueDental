@@ -23,9 +23,39 @@
 			   
         {!! Form::close() !!}
     </div>
-    <div class="col-md-6">
-      Dentistas cadastrados
-    </div>
+   
+   <div class="col-md-4">
+
+
+            <h2> Clinicas cadastradas </h2>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>CROSP</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($dentists as $destist)
+          <tr>
+
+                            <td>{{ $destist->id }}</td>    
+                            <td> {{ $destist->name }}</td>
+                            <td> {{ $destist->crosp }}</td>
+                     
+                        </tr>
+
+                    @endforeach
+                        
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
 </div>
           
 

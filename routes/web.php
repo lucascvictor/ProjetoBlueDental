@@ -1,7 +1,7 @@
 <?php
 
 
-	Route::get('/', 'NotebookController@index');
+	Route::get('/', 'HomeController@index');
 
 	Route::group(['prefix' => 'notebook'], function() {
 
