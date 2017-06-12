@@ -23,7 +23,7 @@ class ClinicController extends Controller
      */
     public function create()
     {
-        //
+        return view('clinic.create');
     }
 
     /**

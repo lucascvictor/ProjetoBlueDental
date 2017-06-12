@@ -15,6 +15,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -91,6 +92,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         array (
             'Cron\\' => 5,
             'Controllers\\' => 12,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -177,6 +179,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'Repositories\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/BlueDental/Repositories',
+            1 => __DIR__ . '/../..' . '/app/BlueDental/Repositories',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -201,6 +204,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/BlueDental/Models',
+            1 => __DIR__ . '/../..' . '/app/BlueDental/Models',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -233,6 +237,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'Database\\' => 
         array (
             0 => __DIR__ . '/../..' . '/database',
+            1 => __DIR__ . '/../..' . '/database',
         ),
         'Cron\\' => 
         array (
@@ -241,6 +246,11 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/Http/Controllers',
+            1 => __DIR__ . '/../..' . '/app/Http/Controllers',
+        ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
         ),
         'Carbon\\' => 
         array (
@@ -298,12 +308,19 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'App\\BlueDental\\Models\\Notebook' => __DIR__ . '/../..' . '/app/BlueDental/Models/Notebook.php',
         'App\\BlueDental\\Models\\Rotation' => __DIR__ . '/../..' . '/app/BlueDental/Models/Rotation.php',
         'App\\BlueDental\\Models\\Schedule' => __DIR__ . '/../..' . '/app/BlueDental/Models/Schedule.php',
+        'App\\BlueDental\\Repositories\\ClinicRepository' => __DIR__ . '/../..' . '/app/BlueDental/Repositories/ClinicRepository.php',
+        'App\\BlueDental\\Repositories\\DentistRepository' => __DIR__ . '/../..' . '/app/BlueDental/Repositories/DentistRepository.php',
+        'App\\BlueDental\\Repositories\\NotebookRepository' => __DIR__ . '/../..' . '/app/BlueDental/Repositories/NotebookRepository.php',
+        'App\\BlueDental\\Repositories\\RotationRepository' => __DIR__ . '/../..' . '/app/BlueDental/Repositories/RotationRepository.php',
+        'App\\BlueDental\\Repositories\\ScheduleRepository' => __DIR__ . '/../..' . '/app/BlueDental/Repositories/ScheduleRepository.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\CsvImport' => __DIR__ . '/../..' . '/app/BlueDental/Models/CsvImport.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\ClinicController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClinicController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CsvImportController' => __DIR__ . '/../..' . '/app/Http/Controllers/CsvImportController.php',
         'App\\Http\\Controllers\\DentistController' => __DIR__ . '/../..' . '/app/Http/Controllers/DentistController.php',
+        'App\\Http\\Controllers\\ImageUploadController' => __DIR__ . '/../..' . '/app/Http/Controllers/ImageUploadController.php',
         'App\\Http\\Controllers\\NotebookController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotebookController.php',
         'App\\Http\\Controllers\\RotationController' => __DIR__ . '/../..' . '/app/Http/Controllers/RotationController.php',
         'App\\Http\\Controllers\\ScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ScheduleController.php',
@@ -321,6 +338,13 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'CreateClinicsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000000_create_clinics_table.php',
         'CreateCsvImportTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000006_create_csv_import_table.php',
         'CreateDentistsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000001_create_dentists_table.php',

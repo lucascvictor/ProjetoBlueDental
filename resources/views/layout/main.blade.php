@@ -11,7 +11,7 @@
 
       @include('partials._nav')
 
-        <div  class="container-fluid">
+        <div  class="container-fluid" style="margin: 5%;">
           
           
 

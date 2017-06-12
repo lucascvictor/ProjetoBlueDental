@@ -23,7 +23,7 @@ class RotationController extends Controller
      */
     public function create()
     {
-        //
+        return view('rotation.create');
     }
 
     /**

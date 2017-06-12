@@ -28,7 +28,7 @@
 
 		Route::get ('{id}', ['uses' =>'RotationController@show']);
 
-		Route::post ('', ['uses' => 'RotationController@store']);
+		Route::post ('', ['uses' => 'RotationController@store'])->name('rotation.store');
 
 		Route::put ('{id}', ['uses' => 'RotationController@update']);
 
@@ -45,7 +45,7 @@
 
 		Route::get ('{id}', ['uses' =>'ScheduleController@show']);
 
-		Route::post ('', ['uses' => 'ScheduleController@store']);
+		Route::post ('', ['uses' => 'ScheduleController@store'])->name('schedule.store');
 
 		Route::put ('{id}', ['uses' => 'ScheduleController@update']);
 
@@ -61,7 +61,7 @@
 
 		Route::get ('{id}', ['uses' =>'ClinicController@show']);
 
-		Route::post ('', ['uses' => 'ClinicController@store']);
+		Route::post ('', ['uses' => 'ClinicController@store'])->name('clinic.store');
 
 		Route::put ('{id}', ['uses' => 'ClinicController@update']);
 
@@ -77,7 +77,7 @@
 
 		Route::get ('{id}', ['uses' =>'DentistController@show']);
 
-		Route::post ('', ['uses' => 'DentistController@store']);
+		Route::post ('', ['uses' => 'DentistController@store'])->name('dentist.store');
 
 		Route::put ('{id}', ['uses' => 'DentistController@update']);
 		
