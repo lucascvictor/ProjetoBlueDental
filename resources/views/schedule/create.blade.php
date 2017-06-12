@@ -65,7 +65,16 @@
                         </tr>
 
                     @endforeach
-                        
+                           <td> 
+            {{ Form::open(array('route' => array('schedule.edit', $schedule->id), 'method' => 'get'))}}
+				<button type="submit" class="btn btn-success">Editar</button>
+			{{ Form::close() }}
+			</td>
+            <td> 
+            {{ Form::open(array('route' => array('schedule.destroy', $schedule->id), 'method' => 'delete'))}}
+				<button type="submit" class="btn btn-danger">Deletar</button>
+			{{ Form::close() }}
+			</td>
                        
                     </tbody>
                 </table>

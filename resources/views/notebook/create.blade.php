@@ -66,7 +66,7 @@
               @endforeach
             </select>
 
-    		{{ Form::submit('Salvar', array('class' => 'btn btn-success btn-lg btn-block')) }}
+            
 
 			   
         {!! Form::close() !!}
@@ -126,7 +126,18 @@
                         </tr>
 
 					@endforeach
-                        
+             <td> 
+            {{ Form::open(array('route' => array('notebook.edit', $notebook->id), 'method' => 'get'))}}
+				<button type="submit" class="btn btn-success">Editar</button>
+			{{ Form::close() }}
+			</td>
+            <td> 
+            {{ Form::open(array('route' => array('notebook.destroy', $notebook->id), 'method' => 'delete'))}}
+				<button type="submit" class="btn btn-danger">Deletar</button>
+			{{ Form::close() }}
+			</td>
+
+    		{{ Form::submit('Salvar', array('class' => 'btn btn-success btn-lg btn-block')) }}
                        
                     </tbody>
                 </table>

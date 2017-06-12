@@ -57,7 +57,7 @@ class ClinicController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -68,7 +68,8 @@ class ClinicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $clinic = new ClinicRepository();
+        return view('clinic.edit')->with('clinic', $clinic->getClinic($id));
     }
 
     /**
@@ -91,6 +92,8 @@ class ClinicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $clinic = new ClinicRepository();
+        $clinic->destroy($id);
+        return redirect()->back();
     }
 }

@@ -24,7 +24,7 @@
         {!! Form::close() !!}
     </div>
    
-   <div class="col-md-4">
+   <div class="col-md-6">
 
 
             <h2> Clinicas cadastradas </h2>
@@ -40,13 +40,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($dentists as $destist)
+                    @foreach($dentists as $dentist)
           <tr>
 
-                            <td>{{ $destist->id }}</td>    
-                            <td> {{ $destist->name }}</td>
-                            <td> {{ $destist->crosp }}</td>
-                     
+                            <td>{{ $dentist->id }}</td>    
+                            <td> {{ $dentist->name }}</td>
+                            <td> {{ $dentist->crosp }}</td>
+                          <td>
+                          {{ Form::open(array('route' => array('dentist.edit', $dentist->id), 'method' => 'get'))}}
+                              <button type="submit" class="btn btn-success">Editar</button>
+                          {{ Form::close() }}
+                          </td>
+                          <td> 
+                              {{ Form::open(array('route' => array('dentist.destroy', $dentist->id), 'method' => 'delete'))}}
+                                  <button type="submit" class="btn btn-danger">Deletar</button>
+                              {{ Form::close() }}
+                        </td>
                         </tr>
 
                     @endforeach

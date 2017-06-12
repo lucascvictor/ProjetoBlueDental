@@ -26,7 +26,7 @@
         {!! Form::close() !!}
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-6">
 
 
             <h2> Clinicas cadastradas </h2>
@@ -48,7 +48,17 @@
                             <td>{{ $clinic->id }}</td>    
                             <td> {{ $clinic->name }}</td>
                             <td> {{ $clinic->adress }}</td>
-                     
+                            <td> 
+                            {{ Form::open(array('route' => array('clinic.edit', $clinic->id), 'method' => 'get'))}}
+    							<button type="submit" class="btn btn-success">Editar</button>
+							{{ Form::close() }}
+							</td>
+                            <td> 
+                            {{ Form::open(array('route' => array('clinic.destroy', $clinic->id), 'method' => 'delete'))}}
+    							<button type="submit" class="btn btn-danger">Deletar</button>
+							{{ Form::close() }}
+							</td>
+                     		
                         </tr>
 
 					@endforeach

@@ -94,6 +94,8 @@ class NotebookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $notebook = new NotebookRepository();
+        $notebook->destroy($id);
+        return redirect()->back();
     }
 }

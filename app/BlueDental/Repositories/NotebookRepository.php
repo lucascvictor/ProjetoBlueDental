@@ -66,5 +66,11 @@ class NotebookRepository
 		return isset($retorno[0]->id);
 	}
 
+	public function destroy($id)
+	{
+		Notebook::where('id', $id)->delete();
+	
+	}
+
 
 }

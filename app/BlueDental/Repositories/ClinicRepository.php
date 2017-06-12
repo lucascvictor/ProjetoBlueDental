@@ -25,4 +25,16 @@ class ClinicRepository
 
 	}
 
+	public function destroy($id)
+	{
+		Clinic::where('id', $id)->delete();
+		
+	}
+
+	public function getClinic($id)
+	{
+		return Clinic::find($id);
+	}
+
+
 }
