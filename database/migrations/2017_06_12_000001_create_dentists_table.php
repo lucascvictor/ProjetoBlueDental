@@ -16,7 +16,7 @@ class CreateDentistsTable extends Migration
         Schema::create('dentists', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('crosp');
+            $table->integer('crosp', 5);
         });
     }
 
