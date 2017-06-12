@@ -14,7 +14,7 @@
 
 	<div class="row">
         <div class="col-lg-10">
-            <h2>Lista de </h2>
+            <h2>Agenda dos dentistas</h2>
 
             <div class="table-responsive">
                 <table class="table table-hover table-striped">
@@ -34,8 +34,7 @@
                             <td>{{ $notebook->clinic }}</td>
                             <td>{{ $notebook->schedule }}</td>
                             <td>{{ $notebook->rotation }}</td>
-                            <td><a class="btn btn-default" href="/admin/associados/perfil/editar/{{ $associado->id }}">Alterar</a></td>
-                            <td><a class="btn btn-primary" href="/admin/associados/perfil/{{ $associado->id }}">Visualizar Perfil</a></td>
+                     
                         </tr>
 
 					@endforeach
