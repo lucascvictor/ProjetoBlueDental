@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('titulo', 'Escalas | Agenda')
+@section('titulo', 'Escalas')
 
 @section('extrastyle')
 
