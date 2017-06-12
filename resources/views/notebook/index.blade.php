@@ -11,16 +11,10 @@
 
 @section('conteudo')
 
-<<<<<<< HEAD
-  @foreach($notebooks as $notebook)
-  
-    {{ $notebook->id }}
 
-  @endforeach
-=======
 	<div class="row">
         <div class="col-lg-10">
-            <h2>Lista de Associados</h2>
+            <h2>Lista de </h2>
 
             <div class="table-responsive">
                 <table class="table table-hover table-striped">
@@ -36,9 +30,10 @@
                     <tbody>
                     @foreach($notebooks as $notebook)
 					<tr>
-                            <td>{{ $notebook->name }}</td>
-                            <td>{{ $notebook->clinica }}</td>
-                            <td>{{ $notebook->tel_celular }}</td>
+                            <td>{{ $notebook->dentist }}</td>
+                            <td>{{ $notebook->clinic }}</td>
+                            <td>{{ $notebook->schedule }}</td>
+                            <td>{{ $notebook->rotation }}</td>
                             <td><a class="btn btn-default" href="/admin/associados/perfil/editar/{{ $associado->id }}">Alterar</a></td>
                             <td><a class="btn btn-primary" href="/admin/associados/perfil/{{ $associado->id }}">Visualizar Perfil</a></td>
                         </tr>
@@ -51,6 +46,6 @@
             </div>
         </div>
 	</div>
->>>>>>> DentistsRegister
+
 
 @endsection  
