@@ -2,33 +2,33 @@
 <html lang="pt-br">
   <head>
 
-    @include('partials._head')
-    @yield('extrastyle')
+  @include('partials._head')
+  @yield('extrastyle')
 
   </head>
 
-    <body style="background-color: #dbe3e9" id="app-layout">
+  <body style="background-color: #A2CC44" id="app-layout">
 
-      @include('partials._nav')
+    @include('partials._nav')
 
-        <div  class="container-fluid" style="padding-top: 22%;">
-          
-          <div class="row">
+      <div  class="container-fluid" style="padding-top: 22%;">
+        
+        <div class="row">
 
-              @yield('conteudo')
-
-          </div>
-           
-
-            @include('partials._footer')
+          @yield('conteudo')
 
         </div>
+         
 
-      @include('partials._javascript')
-      @yield('extrascript')
+        @include('partials._footer')
+
+      </div>
+
+    @include('partials._javascript')
+    @yield('extrascript')
 
 
-    </body>
-  
+  </body>
+
 
 </html>

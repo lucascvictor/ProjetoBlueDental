@@ -11,6 +11,10 @@
 
 @section('conteudo')
 
-man
+  @foreach($notebooks as $notebook)
+  
+    {{ $notebook->id }}
+
+  @endforeach
 
 @endsection  

@@ -19,10 +19,11 @@
       
 
         <li><a href="{{ url('/') }}">Home</a></li>
+
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Clinica/Dentista <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ url('/notebook') }}">Pagina Principal Atividade 1.</a></li>
-              <li><a href="{{ url('/notebook/add') }}">Adicionar Dentista/a></li>
+              <li><a href="{{ url('/notebook/add') }}">Adicionar Dentista </a></li>
               <li><a href="{{ url('/clinic/add') }}">Adicionar Clinica</a></li>
               <li><a href="{{ url('/rotation/add') }}">Adicionar Escala</a></li> 
             </ul>
@@ -35,7 +36,7 @@
               </ul>
           </li>
 
-                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Importar CSV <b class="caret"></b></a>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Importar CSV <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ url('/csvimport/') }}">Pagina Principal Atividade 3.</a></li>
 
