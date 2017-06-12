@@ -7,6 +7,8 @@
 
 		Route::get ('', ['uses' => 'NotebookController@index']);
 
+		Route::get ('add', ['uses' => 'NotebookController@create']);
+
 		Route::get ('{id}', ['uses' =>'NotebookController@show']);
 
 		Route::post ('', ['uses' => 'NotebookController@store']);
@@ -21,6 +23,8 @@
 	Route::group(['prefix' => 'rotations'], function() {
 
 		Route::get ('', ['uses' => 'RotationController@index']);
+
+		Route::get ('add', ['uses' => 'RotationController@create']);
 
 		Route::get ('{id}', ['uses' =>'RotationController@show']);
 
@@ -37,6 +41,8 @@
 
 		Route::get ('', ['uses' => 'ScheduleController@index']);
 
+		Route::get ('add', ['uses' => 'ScheduleController@create']);
+
 		Route::get ('{id}', ['uses' =>'ScheduleController@show']);
 
 		Route::post ('', ['uses' => 'ScheduleController@store']);
@@ -51,6 +57,8 @@
 
 		Route::get ('', ['uses' => 'ClinicController@index']);
 
+		Route::get ('add', ['uses' => 'ClinicController@create']);
+
 		Route::get ('{id}', ['uses' =>'ClinicController@show']);
 
 		Route::post ('', ['uses' => 'ClinicController@store']);
@@ -64,6 +72,8 @@
 	Route::group(['prefix' => 'dentists'], function() {
 
 		Route::get ('', ['uses' => 'DentistController@index']);
+
+		Route::get ('add', ['uses' => 'DentistController@create']);
 
 		Route::get ('{id}', ['uses' =>'DentistController@show']);
 
