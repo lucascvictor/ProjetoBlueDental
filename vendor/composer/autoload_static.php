@@ -53,6 +53,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         ),
         'R' => 
         array (
+            'Repositories\\' => 13,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -64,6 +65,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Models\\' => 7,
         ),
         'L' => 
         array (
@@ -83,10 +85,12 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
+            'Database\\' => 9,
         ),
         'C' => 
         array (
             'Cron\\' => 5,
+            'Controllers\\' => 12,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -170,6 +174,10 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Repositories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/BlueDental/Repositories',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -189,6 +197,10 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/BlueDental/Models',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -218,9 +230,17 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
+        ),
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Http/Controllers',
         ),
         'Carbon\\' => 
         array (
@@ -272,7 +292,13 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
     );
 
     public static $classMap = array (
+        'App\\BlueDental\\Models\\Clinics' => __DIR__ . '/../..' . '/app/BlueDental/Models/Clinic.php',
+        'App\\BlueDental\\Models\\Dentist' => __DIR__ . '/../..' . '/app/BlueDental/Models/Dentist.php',
+        'App\\BlueDental\\Models\\Notebook' => __DIR__ . '/../..' . '/app/BlueDental/Models/Notebook.php',
+        'App\\BlueDental\\Models\\Rotation' => __DIR__ . '/../..' . '/app/BlueDental/Models/Rotation.php',
+        'App\\BlueDental\\Models\\Schedule' => __DIR__ . '/../..' . '/app/BlueDental/Models/Schedule.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\CsvImport' => __DIR__ . '/../..' . '/app/BlueDental/Models/CsvImport.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -284,17 +310,22 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\ImageUpload' => __DIR__ . '/../..' . '/app/BlueDental/Models/ImageUpload.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'CreateClinicsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000000_create_clinics_table.php',
+        'CreateCsvImportTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000006_create_csv_import_table.php',
+        'CreateDentistsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000001_create_dentists_table.php',
+        'CreateImageUploadTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000005_create_image_upload_table.php',
+        'CreateNotebookTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000004_create_notebook_table.php',
+        'CreateRotationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000002_create_rotations_table.php',
+        'CreateSchedulesTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_000003_create_schedules_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
