@@ -176,7 +176,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         ),
         'Repositories\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app/Apemesp/Repositories',
+            0 => __DIR__ . '/../..' . '/app/BlueDental/Repositories',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -200,7 +200,7 @@ class ComposerStaticInitc57ce30f92771276fcda990291f8d64e
         ),
         'Models\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app/Apemesp/Models',
+            0 => __DIR__ . '/../..' . '/app/BlueDental/Models',
         ),
         'League\\Flysystem\\' => 
         array (

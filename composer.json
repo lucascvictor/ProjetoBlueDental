@@ -28,8 +28,8 @@
             "App\\": "app/",
             "Database\\": "database/",
             "Controllers\\": "app/Http/Controllers",
-            "Models\\": "app/Apemesp/Models",
-            "Repositories\\": "app/Apemesp/Repositories"
+            "Models\\": "app/BlueDental/Models",
+            "Repositories\\": "app/BlueDental/Repositories"
         }
     },
     "scripts": {
