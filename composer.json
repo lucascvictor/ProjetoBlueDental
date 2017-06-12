@@ -24,7 +24,12 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "App\\": "app/",
+            "Database\\": "database/",
+            "Controllers\\": "app/Http/Controllers",
+            "Models\\": "app/Apemesp/Models",
+            "Repositories\\": "app/Apemesp/Repositories"
         }
     },
     "scripts": {
