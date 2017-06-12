@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layout.main')
 
 @section('titulo', 'Escalas | Agenda')
 
@@ -6,11 +6,11 @@
 
 
 
-@nedsection
+@endsection
 
 
 @section('conteudo')
 
-
+man
 
 @endsection  
