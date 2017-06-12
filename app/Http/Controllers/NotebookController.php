@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\BlueDental\Repositories\NotebookRepository;
+
 class NotebookController extends Controller
 {
     /**
@@ -13,7 +15,8 @@ class NotebookController extends Controller
      */
     public function index()
     {
-        return "Index para notebook";
+        $notebook = new NotebookRepository();
+        return view('notebook.index')->with('notebooks', $notebook->getAll());
     }
 
     /**

@@ -28,5 +28,17 @@ class NotebookRepository
 		$this->data = date("d-m-Y H:i:s");
 	}
 
+	public function getAll()
+	{
+		return DB::table('notebook')
+		->join('dentists', 'dentists.id', '=', 'notebook.dentist_id' )
+		->join('clinics', 'clinics.id', '=', 'notebook.clinic_id' )
+		->join('rotations', 'rotations.id', '=', 'notebook.rotation_id' )
+		->join('schedules', 'schedules.id', '=', 'notebook.schedules_id' )
+		->select('clinics.name', 'dentists.name', 'rotations.rotation', 'schedules.*')
+		->orderBy('dentist.name', 'asc')
+		->paginate(6);
+	}
+
 
 }
