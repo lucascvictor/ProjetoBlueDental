@@ -35,7 +35,7 @@ class NotebookRepository
 		->join('clinics', 'clinics.id', '=', 'notebook.clinic_id' )
 		->join('rotations', 'rotations.id', '=', 'notebook.rotation_id' )
 		->join('schedules', 'schedules.id', '=', 'notebook.schedule_id' )
-		->select('clinics.name', 'dentists.name', 'rotations.rotation', 'schedules.*')
+		->select('clinics.name', 'as clinic', 'dentists.name', 'rotations.rotation', 'schedules.*')
 		->orderBy('dentist.name', 'asc')
 		->paginate(6);
 	}
