@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDentistsTable extends Migration
+class CreateImageUploadTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateDentistsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dentists', function (Blueprint $table) {
+        Schema::create('image_upload', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('crosp');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateDentistsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dentists');
+        Schema::dropIfExists('image_upload');
     }
 }
