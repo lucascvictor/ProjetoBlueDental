@@ -23,7 +23,7 @@
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Clinica/Dentista <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ url('/notebook') }}">Pagina Principal Atividade 1.</a></li>
-              <li><a href="{{ url('/notebook/add') }}">Adicionar Dentista </a></li>
+              <li><a href="{{ url('/dentist/add') }}">Adicionar Dentista </a></li>
               <li><a href="{{ url('/clinic/add') }}">Adicionar Clinica</a></li>
               <li><a href="{{ url('/rotation/add') }}">Adicionar Escala</a></li> 
             </ul>

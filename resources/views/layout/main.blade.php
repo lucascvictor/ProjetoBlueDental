@@ -7,17 +7,16 @@
 
   </head>
 
-    <body style="background-color: #dbe3e9" id="app-layout">
+    <body style="background-color: #A4CC62" id="app-layout">
 
       @include('partials._nav')
 
-        <div  class="container-fluid" style="padding-top: 22%;">
+        <div  class="container-fluid">
           
-          <div class="row">
+          
 
               @yield('conteudo')
 
-          </div>
            
 
             @include('partials._footer')

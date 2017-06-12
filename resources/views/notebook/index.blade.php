@@ -32,8 +32,37 @@
 					<tr>
                             <td>{{ $notebook->dentist }}</td>
                             <td>{{ $notebook->clinic }}</td>
-                            <td>{{ $notebook->schedule }}</td>
-                            <td>{{ $notebook->rotation }}</td>
+                           	<td>Das {{$notebook->initial}} às {{ $notebook->final }}
+                           	Com almoço entre {{ $notebook->initial_l }} e {{ $notebook->final_l }}
+                           	</td>
+                            <td>
+                            	<?php $dias = explode (" ", $notebook->rotation) ?>
+                            	@foreach ($dias as $dia)
+                            		@if ($dia == 1)
+                            			Seg
+                            		@endif
+                            		@if ($dia == 2)
+                            			Ter
+                            		@endif
+                            		@if ($dia == 3)
+                            			Qua
+                            		@endif
+                            		@if ($dia == 4)
+                            			Qui
+                            		@endif
+                            		@if ($dia == 5)
+                            			Sex
+                            		@endif
+                            		@if ($dia == 6)
+                            			Sab
+                            		@endif
+                            		@if ($dia == 7)
+                            			Dom
+                            		@endif
+
+                            	@endforeach 
+                            	
+                            </td>
                      
                         </tr>
 
