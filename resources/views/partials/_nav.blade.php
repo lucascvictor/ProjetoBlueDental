@@ -21,23 +21,23 @@
         <li><a href="{{ url('/') }}">Home</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Clinica/Dentista <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="{{ url('/register') }}">Pagina Principal Atividade 1.</a></li>
-              <li><a href="{{ url('/apemesp/quemsomos') }}">Adicionar Dentista/a></li>
-              <li><a href="{{ url('/apemesp/estatuto') }}">Adicionar Clinica</a></li>
-              <li><a href="{{ url('/apemesp/comissoes') }}">Adicionar Escala</a></li> 
+              <li><a href="{{ url('/notebook') }}">Pagina Principal Atividade 1.</a></li>
+              <li><a href="{{ url('/notebook/add') }}">Adicionar Dentista/a></li>
+              <li><a href="{{ url('/clinic/add') }}">Adicionar Clinica</a></li>
+              <li><a href="{{ url('/rotation/add') }}">Adicionar Escala</a></li> 
             </ul>
           </li>
 
           <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Upload de Imagem <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="{{ url('/musicoterapia/oquee') }}">Pagina Principal Atividade 2.</a></li>
+              <li><a href="{{ url('/imageupload') }}">Pagina Principal Atividade 2.</a></li>
 
               </ul>
           </li>
 
                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Importar CSV <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="{{ url('/musicoterapia/oquee') }}">Pagina Principal Atividade 3.</a></li>
+              <li><a href="{{ url('/csvimport/') }}">Pagina Principal Atividade 3.</a></li>
 
               </ul>
           </li>
