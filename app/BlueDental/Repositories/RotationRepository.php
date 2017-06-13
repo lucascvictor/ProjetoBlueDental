@@ -23,4 +23,10 @@ class RotationRepository
         $rotation->rotation = $escala;
         $rotation->save();
 	}
+
+	public function destroy($id)
+	{
+		Rotation::where('id', $id)->delete();
+		
+	}
 }

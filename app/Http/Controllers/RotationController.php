@@ -88,6 +88,8 @@ class RotationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rotation = new RotationRepository();
+        $rotation->destroy($id);
+        return redirect()->back();
     }
 }

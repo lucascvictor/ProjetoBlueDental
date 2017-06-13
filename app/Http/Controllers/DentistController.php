@@ -68,7 +68,8 @@ class DentistController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dentist = new DentistRepository();
+        return view('dentist.edit')->with('dentist', $dentist->getDentist($id));
     }
 
     /**
@@ -91,6 +92,8 @@ class DentistController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dentist = new DentistRepository();
+        $dentist->destroy($id);
+        return redirect()->back();
     }
 }

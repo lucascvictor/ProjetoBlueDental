@@ -17,8 +17,8 @@ class CreateSchedulesTable extends Migration
             $table->increments('id');
             $table->integer('initial');
             $table->integer('final');
-            $table->integer('initial_lunch');
-            $table->integer('final_lunch');
+            $table->integer('initial_lunch')->nullable();
+            $table->integer('final_lunch')->nullable();
 
         });
     }

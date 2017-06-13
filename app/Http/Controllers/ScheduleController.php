@@ -37,7 +37,7 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->initial == null || $request->initial_lunch == null || $request->final == null || $request->final_lunch == null ) {
+        if ($request->initial == null || $request->final == null  ) {
             return redirect()->back();
         } else {
              $schedule = new ScheduleRepository();
@@ -88,6 +88,8 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $schedule = new ScheduleRepository();
+        $schedule->destroy($id);
+        return redirect()->back();
     }
 }

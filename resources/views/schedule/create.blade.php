@@ -35,7 +35,7 @@
         {!! Form::close() !!}
     </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
 
 
             <h3> Horários cadastrados </h3>
@@ -61,11 +61,7 @@
                             <td> {{ $schedule->final }}</td>
                             <td> {{ $schedule->initial_lunch }}</td>
                             <td> {{ $schedule->final_lunch }}</td>
-                     
-                        </tr>
-
-                    @endforeach
-                           <td> 
+                                 <td> 
             {{ Form::open(array('route' => array('schedule.edit', $schedule->id), 'method' => 'get'))}}
 				<button type="submit" class="btn btn-success">Editar</button>
 			{{ Form::close() }}
@@ -75,6 +71,11 @@
 				<button type="submit" class="btn btn-danger">Deletar</button>
 			{{ Form::close() }}
 			</td>
+                     
+                        </tr>
+
+                    @endforeach
+                      
                        
                     </tbody>
                 </table>

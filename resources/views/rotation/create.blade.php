@@ -105,7 +105,6 @@
                      
                         </tr>
 
-					@endforeach
                         <td> 
             {{ Form::open(array('route' => array('rotation.edit', $rotation->id), 'method' => 'get'))}}
 				<button type="submit" class="btn btn-success">Editar</button>
@@ -117,7 +116,8 @@
 			{{ Form::close() }}
 			</td>
 
-    		{{ Form::submit('Salvar', array('class' => 'btn btn-success btn-lg btn-block')) }}
+					@endforeach
+               
                        
                     </tbody>
                 </table>

@@ -26,4 +26,11 @@ class ScheduleRepository
         $schedule->save();
 
 	}
+
+	
+	public function destroy($id)
+	{
+		Schedule::where('id', $id)->delete();
+		
+	}
 }

@@ -25,4 +25,15 @@ class DentistRepository
 
 	}
 
+	public function destroy($id)
+	{
+		Dentist::where('id', $id)->delete();
+		
+	}
+
+	public function getDentist($id)
+	{
+		return Dentist::find($id);
+	}
+
 }
